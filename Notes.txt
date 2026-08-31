@@ -1,0 +1,89 @@
+spring initializr
+Gradle/Maven - build automation tool for java
+
+provide:
+-predefined industry grade folder structure
+-compiles the project
+-build the project
+-test the project and generate the test report
+-automatically add the jar files(collection of extended class) is class path through dependencies
+-start/ stop the server
+-package the project either into JAR / WAR files(WAR-WEB)
+-handles the lifecycle of project
+
+#what is @SpringBootApplication?
+it is the combination of three annotations:
+ 1. @SpringBootConfiguration- it marks the class as a source of beans.
+ 2. @EnableAutoConfiguration- it automatically configure the project based on the dependencies available.
+ 3. @ComponentsScan-It scans the packages to find the beans and register them inside spring container.
+
+beans-simple java objects which are managed by SpringContainer
+SpringContainer will provide and destroy the object
+		- it is basically a wrapper around JVM
+		-the job of SpringContainer is it scans for beans and register the beans in the memory area
+		- manage the life cycle of beans.
+		-it performs dependency injection.
+		-it manage the resources
+		-also called IoC Container(Inversion of Control)
+		-Implementation: BeanFactory(Interface)(Old Container)
+		-ApplicationContext(New Container) 
+
+There 3 ways to create beans:
+1.using xml files(Old way-x)
+2.using stereotype annotations(Java based annotation)
+	-@Component
+	-@Controller
+	-@RestController
+	-@Service
+	-@Repository
+3.Using configuration class: //above class
+	-@Configuration-It mark the class a source of bean
+	-@Bean-it tells the SpringConatiner to build a bean
+
+SpringApplication.run -- mandatory bcoz it starts the SpringContainer
+
+##We can also put the bean anywhere but there should @Configuration present 
+
+Session
+Request
+
+
+DI(Dependency Injection)-mechanism in which SpringContainer automnatically inject the bean inside a class reference variable
+    in simple word SpringContainer automatically assigns the address of the beans inside another class reference variable
+    1.Field based injection-NR
+    2.Setter based injection-R
+    3.Constructor based injection-HR
+Constructor based injection-+ If we parameterized constructor them it will called by spring without @Autowired annotation
+
+ThymeLeaf: server-side Java template engine used for rendering HTML, XML, JavaScript, CSS, and text. It acts as a powerful, feature-rich alternative to JSP and integrates smoothly with the Spring Framework and Spring Boot
+
+error404- site not reached which we are searching for
+error500- internal server error which is viewed in internal site but not in client site
+
+ctrl+/ to comment out
+
+Model- data transfer from java to html
+
+required= false : treat variable as an optional variable
+
+post : to hide 
+
+HTTP verbs:-
+get request: to extract the resource
+post request: to create a resource
+put request: to fully update a resource
+patch request: to partial update a resource
+delete request: to delete a resource
+
+ctrl+h = replace
+ctrl+f = search
+ctrl+j = to open/close terminal
+
+////////// R  E  S  t //////////
+
+In Spring Boot, Jackson is the default, go-to library used for processing JSON. It handles the automatic conversion of Java objects into JSON (serialization) and incoming JSON requests back into Java objects (deserialization) inside your REST controllers.
+
+
+
+
+

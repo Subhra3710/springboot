@@ -1,0 +1,25 @@
+package com.subhra;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BeanLifeCycleApplication {
+
+	public static void main(String[] args) {
+		var context = SpringApplication.run(BeanLifeCycleApplication.class, args);
+		var greet = context.getBean(Greet.class);
+		greet.Greet();
+	}
+
+	/*
+	Bean Life Cycle
+
+	1.Bean Instantiated//object created-constructor required
+	2.Dependency Injected(if available)-by using anyway of DI
+	3.Bean initialized-@PostConstruct
+	4.Bean used
+	5.Bean Destroyed-@PreDestroy
+	-managed by SprinContainer
+	*/
+}
