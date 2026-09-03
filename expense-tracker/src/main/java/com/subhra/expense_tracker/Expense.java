@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Expense {
-    private  int data;
+    private int id;
     private String title;
     private String category;
     private double price;
