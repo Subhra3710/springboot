@@ -84,6 +84,8 @@ ctrl+j = to open/close terminal
 In Spring Boot, Jackson is the default, go-to library used for processing JSON. It handles the automatic conversion of Java objects into JSON (serialization) and incoming JSON requests back into Java objects (deserialization) inside your REST controllers.
 
 
+create-- first drop and then recreate the table
+
 
 
 

@@ -25,5 +25,5 @@ public class Expense {
     private double price;
     private LocalDate date;
 
-    
+    private int  description;
 }
