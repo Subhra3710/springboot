@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 
 
 @RequiredArgsConstructor
-
+@CrossOrigin("http://localhost:5173/?#/expenses")
 @RestController
 public class ExpenseController{
    
